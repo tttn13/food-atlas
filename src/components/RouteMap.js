@@ -1,9 +1,7 @@
 import { Dimensions, StyleSheet, View } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
   
-const RouteMap = ({ 
-  destination 
-}) => {
+const RouteMap = ({  destination }) => {
   const initRegion = {
     latitude: 37.78825,
     longitude: -122.4324,
@@ -13,7 +11,7 @@ const RouteMap = ({
   return (
     <View style={[styles.mapContainer]}>
       <MapView
-        provider={PROVIDER_GOOGLE}
+        // provider={PROVIDER_GOOGLE}
         style={styles.map}
         region = {initRegion}
       >

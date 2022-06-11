@@ -55,7 +55,7 @@ export default function RestaurantScreen({ navigation }) {
   const [copiedText, setCopiedText] = useState("");
 
   const copyToClipboard = async () => {
-    await Clipboard.setStringAsync("hello world");
+    await Clipboard.setStringAsync(data?.url);
     const text = await Clipboard.getStringAsync();
     setCopiedText(text);
   };
@@ -136,12 +136,12 @@ export default function RestaurantScreen({ navigation }) {
   }, [id]);
 
   useEffect(() => {
-    let timer = setTimeout(() => setToastVisible(false), 2000);
+    let timer = setTimeout(() => setToastVisible(false), 1000);
     return () => {
       clearTimeout(timer);
     };
   }, [toastVisible]);
-
+  
   return (
     <RootSiblingParent>
       <BottomSheetModalProvider>
@@ -232,9 +232,7 @@ export default function RestaurantScreen({ navigation }) {
                           <Button
                             style={styles.moreInfoOption}
                             title="Cancel"
-                            onPress={() =>
-                              bottomSheetModalRef.current?.dismiss()
-                            }
+                            onPress={() => bottomSheetModalRef.current?.dismiss()}
                           />
                         </TouchableOpacity>
                       </BottomSheetModal>
@@ -247,14 +245,14 @@ export default function RestaurantScreen({ navigation }) {
                     )}
                     <View style={styles.rating}>
                       <TouchableOpacity
-                        style={styles.stars}
+                        style={{flexDirection: "row"}}
                         onPress={() => scrollHandler(reviewLayout)}
                       >
                         {restaurantRating &&
                           renderStars(restaurantRating, "full")}
                         {restaurantRating &&
                           renderStars(restaurantRating, "half")}
-                        <CustomText textStyle='medium' style={{ color: "white" }}>
+                        <CustomText textStyle='medium' style={{ color: "white", paddingLeft: 5 }}>
                           {data?.review_count ? data.review_count : ""}{" "}
                         </CustomText>
                       </TouchableOpacity>
@@ -359,7 +357,7 @@ export default function RestaurantScreen({ navigation }) {
                   <View style={styles.tripInfoWrapper}>
                     <View style={styles.tripInfoSection}>
                       {data && (
-                        <CustomText textStyle='medium' style={styles.address}>
+                        <CustomText textStyle='medium' style={{paddingVertical: 10}}>
                           {data?.location.display_address.join(", ")}
                         </CustomText>
                       )}
@@ -391,7 +389,7 @@ export default function RestaurantScreen({ navigation }) {
                     >
                       <View>
                         <CustomText textStyle='medium'>Call</CustomText>
-                        <CustomText textStyle='regular' style={[styles.lightText, styles.phoneNumber]}>
+                        <CustomText textStyle='regular' style={[styles.lightText, {paddingVertical: 5}]}>
                           {data?.display_phone}
                         </CustomText>
                       </View>
@@ -755,9 +753,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  stars: {
-    flexDirection: "row",
-  },
   mapWrapperTop: {},
   restaurantInfoWrapper: {
     flex: 1,
@@ -823,12 +818,6 @@ const styles = StyleSheet.create({
   },
   sectionContent: {
     paddingVertical: 10,
-  },
-  address: {
-    paddingVertical: 10,
-  },
-  phoneNumber: {
-    paddingVertical: 5,
   },
   amenitiesItem: {
     flexDirection: "row",

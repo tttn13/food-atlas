@@ -2,7 +2,7 @@
   "expo": {
     "name": "Food Atlas",
     "slug": "food-atlas",
-    "description": "This is a restaurant/food search app",
+    "description": "This is a restaurant and food search app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,7 +22,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.foodatlas",
       "config":{
-        "googleMapsApiKey": "AIzaSyBq0oHkl-DO3iWKhIoIZJpKVLoRFf1EYP4"
+        "googleMapsApiKey": "AIzaSyA1K70NUrcEqt8iM6KyppJyyuELDO3ulVE"
       }
 
     },

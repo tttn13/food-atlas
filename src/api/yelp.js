@@ -1,8 +1,10 @@
 import axios from "axios";
+import { REACT_APP_YELP_API_KEY } from "@env"
 
 export default axios.create({
     baseURL: "https://api.yelp.com/v3/businesses",
     headers: {
-        Authorization: "Bearer of2gZE6UFnShTnmw7I3mI9q6jnHyP0nKZy8khqq8aH7dJDSeg9AmybOYtHzTJLtStuePOTTidKiOcEcwua8oL3LVHcNp4rGHfFwfbipLkM5mJ53iqRij9i37j0qYYnYx"
+        Authorization: `Bearer ${REACT_APP_YELP_API_KEY}`
     }
+    
 })

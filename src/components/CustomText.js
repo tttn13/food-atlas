@@ -2,29 +2,11 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-import {
-  useFonts,
-  Montserrat_400Regular,
-  Montserrat_500Medium,
-  Montserrat_600SemiBold,
-  Montserrat_700Bold,
-  Montserrat_800ExtraBold,
-  Montserrat_900Black,
-} from "@expo-google-fonts/montserrat";
+
 
 export default function CustomText(props) {
   const { textStyle } = props
-  let [fontsLoaded] = useFonts({
-    Montserrat_400Regular,
-    Montserrat_500Medium,
-    Montserrat_600SemiBold,
-    Montserrat_700Bold,
-    Montserrat_800ExtraBold,
-    Montserrat_900Black,
-  });
-  if (!fontsLoaded) {
-    return <CustomText textStyle="bold">Loading </CustomText>;
-  }
+
   let defaultStyle = {}
   if (textStyle == 'regular') {
     defaultStyle = styles.regular
@@ -43,19 +25,23 @@ export default function CustomText(props) {
 }
 const styles = StyleSheet.create({
   regular: {
-    fontFamily: "Montserrat_400Regular",
+    fontFamily: "Avenir-Black",
+    fontWeight: '400',
     fontSize: 15
   },
   medium: {
-    fontFamily: 'Montserrat_500Medium',
+    fontFamily: 'Avenir-Black',
+    fontWeight: '500',
     fontSize: 15
   },
   semiBold: {
-    fontFamily: 'Montserrat_600SemiBold',
+    fontFamily: 'Avenir-Black',
+    fontWeight: '600',
     fontSize: 18
   },
   bold: {
-    fontFamily: 'Montserrat_700Bold',
+    fontFamily: 'Avenir-Black',
+    fontWeight: 'bold',
     fontSize: 18
   },
 });

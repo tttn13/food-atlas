@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import yelp from "../api/yelp";
+import { REACT_APP_YELP_API_KEY } from "@env"
 
 export default (initialTerm = "Burger") => {
   const [results, setResults] = useState({
@@ -8,7 +9,7 @@ export default (initialTerm = "Burger") => {
     loading: false,
     error: null,
   });
-
+  console.log(REACT_APP_YELP_API_KEY)
   const searchRestaurants = async (searchTerm) => {
     setResults({
       data: null,
@@ -30,6 +31,7 @@ export default (initialTerm = "Burger") => {
         loading: false,
         error: null,
       });
+      
     } catch (error) {
       setResults({
         data: null,

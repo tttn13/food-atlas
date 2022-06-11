@@ -6,7 +6,7 @@ import RestaurantScreen from "./src/screens/RestaurantScreen";
 
 const navigator = createStackNavigator({
   Home: HomeScreen,
-  // Restaurant: RestaurantScreen
+  Restaurant: RestaurantScreen
 },{
   initialRouteName: "Home",
   defaultNavigationOptions: {

@@ -43,6 +43,10 @@ export const verticalStaticData = [
   },
 ];
 
+export const noAvar = {
+  imageUrl: require("../assets/images/noAvatar.png")
+}
+
 export const commonCategories = [
   {
     name: "Burger",

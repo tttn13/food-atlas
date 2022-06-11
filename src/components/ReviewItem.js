@@ -11,8 +11,9 @@ import CustomText from "./CustomText";
 function ReviewItem({ review }) {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{ uri: review.user.image_url }} />
+      <Image style={styles.image} source={{uri:review.user.image_url}} />
       <View style={styles.infoContainer}>
+        
         <CustomText textStyle="semiBold" style={styles.header}>{review.user.name}</CustomText>
         <CustomText textStyle="regular" style={styles.content}>{review.text}</CustomText>
         <TouchableOpacity onPress={() => Linking.openURL(`${review.url}`)}>
