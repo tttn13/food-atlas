@@ -9,7 +9,7 @@ Food Atlas is an online directory for discovering local food business ranging fr
 ### Restaurant Screen
 <img src='https://github.com/tttn13/food-atlas/blob/main/assets/readme/rpage1.png' width = "284" height= '555'>
 <img src='https://github.com/tttn13/food-atlas/blob/main/assets/readme/rpage2.png' width = "284" height= '555'>
-<img src='https://github.com/tttn13/food-atlas/blob/main/assets/readme/rp3.png' width = "372" height= '555'>
+<img src='https://github.com/tttn13/food-atlas/blob/main/assets/readme/rp.png' width = "284" height= '555'>
 
 ## Technologies
 
