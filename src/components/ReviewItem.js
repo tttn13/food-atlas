@@ -9,9 +9,11 @@ import colors from "../assets/colors/colors";
 import CustomText from "./CustomText";
 
 function ReviewItem({ review }) {
+  const url = review.user.image_url==null ? "https://cdn-icons-png.flaticon.com/512/747/747376.png" : review.user.image_url
+
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{uri:review.user.image_url}} />
+      <Image style={styles.image} source={{uri: url}} />
       <View style={styles.infoContainer}>
         
         <CustomText textStyle="semiBold" style={styles.header}>{review.user.name}</CustomText>

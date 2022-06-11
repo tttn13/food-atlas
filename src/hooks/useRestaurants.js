@@ -9,7 +9,6 @@ export default (initialTerm = "Burger") => {
     loading: false,
     error: null,
   });
-  console.log(REACT_APP_YELP_API_KEY)
   const searchRestaurants = async (searchTerm) => {
     setResults({
       data: null,

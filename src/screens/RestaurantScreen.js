@@ -142,17 +142,17 @@ export default function RestaurantScreen({ navigation }) {
     };
   }, [toastVisible]);
   
+  if (!data || loading || error) {
+    return (<ActivityIndicator
+      visible={loading}
+      textContent={"Loading..."}
+      textStyle={{ color: colors.textLight }}
+    />)
+  }
   return (
     <RootSiblingParent>
       <BottomSheetModalProvider>
         <View style={styles.container}>
-          {loading && (
-            <ActivityIndicator
-              visible={loading}
-              textContent={"Loading..."}
-              textStyle={{ color: colors.textLight }}
-            />
-          )}
           <ScrollView
             contentInsetAdjustmentBehavior="automatic"
             showsVerticalScrollIndicator={false}
