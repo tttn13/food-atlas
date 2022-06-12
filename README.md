@@ -1,6 +1,6 @@
 # Food Atlas
 ### [Live Demo](https://appetize.io/embed/r3t39d70v0a8e7ag2gfduzrrq0?device=iphone8&osVersion=13.7&scale=75)
-Food Atlas is a mobile app that serves as an online directory for discovering local food business ranging from bars, restaurants, cafes and so on. The default location is San Francisco, USA. The app is built with React Native and the Yelp API. 
+Food Atlas is a mobile app that serves as an online directory for discovering local food businesses ranging from bars, restaurants, cafes and so on. The default location is San Francisco, USA. The app is built with React Native and the Yelp API. 
 
 ## Screenshots
 ### Home Screen
