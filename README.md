@@ -39,12 +39,11 @@ Food Atlas is a mobile app that serves as an online directory for discovering lo
 
 ### Find local restaurants
 - A list of 15 businesses will be shown on the home page when users choose a food catagory or look up a specific food group/restaurant.
-- Users can sort the results by popular, rating, price(low-high), price(high-low) 
-<p float="left">
-
 <img src='https://github.com/tttn13/food-atlas/blob/main/assets/readme/gifs/category.gif' width = "222" height= '449'>
+
+- Users can sort the results by popular, rating, price(low-high), price(high-low) 
+
 <img src='https://github.com/tttn13/food-atlas/blob/main/assets/readme/gifs/sort.gif' width = "222" height= '449'>
-</p>
 
 ### Navigate users to the restaurant page 
 - Users can view up to 3 reviews and 3 photos for each restaurant (the YELP API limitation)
