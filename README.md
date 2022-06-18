@@ -18,13 +18,12 @@ Food Atlas is a mobile app that serves as an online directory for discovering lo
 ## Technologies
 
 - Framework for building front end: `React Native`
-- Making API calls from the [YELP API](https://fusion.yelp.com/) 
-- Custom hooks to fetch data when components mount 
+- Custom hooks to fetch data from the [YELP API](https://fusion.yelp.com/) when components mount 
 - Promise based HTTP client for the browser: `axios`
 - Navigating between different screens: `react-navigation` and `react-navigation-stack`
 - Loading environment variables from .env file: `react-native-dotenv`
 - The library for icons: `react-native-vector-icons`
-- MapView component from module `react-native-maps`
+- MapView component using `react-native-maps`
 - Runtime environment for JS: `Node.js `
 
 ## Key Features
@@ -33,7 +32,7 @@ Food Atlas is a mobile app that serves as an online directory for discovering lo
 - Switch to restaurant screen when clicking on the restaurant detail 
 - Redirect to external sites or functionality when users click on relevant text or icon    
 - Loading spinners for relevant fetching processes
-- Deployed to iOS Simulator 
+- Deployed to an iOS Simulator 
 
 ## Functionality
 
